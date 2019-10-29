@@ -1,5 +1,5 @@
 # angular-crudder
-A schematic project which generates CRUD operation code based on the JSON file.
+A schematic project which generates CRUD operation boiler plate code based on the JSON file.
 
 ### Install Schematics
 ```
@@ -53,9 +53,9 @@ NOTE:-Currently, it does not import in your app.module files and routing file yo
 Each properties of the JSON file should be the FieldName which you want to be displayed in the form. The FieldName values should contain the metadata about that field. Below are the accepted the value metadata:-
 | Name        | Description                                                                            |
 |-------------|----------------------------------------------------------------------------------------|
-| `isId`      | Field is a primary key/id field, which will be used in component's. Possible values: true/false. Default: false                                                                                  |
-| `type`      | Type will be used to generate HTML inputs and if is it group will be used to generate nested forms. Possible values: text|number|radio|select|group                                                 |
+| `isId`      | Field is a primary key/id field, which will be used in component's. Possible values: true/false. Default: false                                                                                                                |
+| `type`      | Type will be used to generate HTML inputs and if is it group will be used to generate nested forms. Possible values: text|number|radio|select|group                                                                         |
 | `maxlength` | If the type is text, you use this property to limit the no. of characters.             |
 | `required`  | If the field is required                                                               |
-| `enum`      | If the type is radio, you can use this property to display the possible values of the radio                                                                                                         |
+| `enum`      | If the type is radio, you can use this property to display the possible values of the radio                                                                                                                                    |
 In case you want to see example of the [Sample](LINK) JSON file.
