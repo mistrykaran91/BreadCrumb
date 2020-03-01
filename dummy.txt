@@ -1,0 +1,38 @@
+<div fxLayout="column" fxLayoutAlign="flex-start">
+  <div fxFlex="row">
+    <div fxFlex="15">
+      TIER
+    </div>
+
+    <div fxFlex="70">
+      Services
+    </div>
+
+    <div fxFlex="15">
+      Threshold
+    </div>
+  </div>
+
+  <div fxFlex="row" *ngFor="let item of data;" fxLayoutGap="11">
+    <div fxFlex="15">
+      {{ item.tier }}
+    </div>
+
+    <div fxFlex="70">
+      <div fxFlex="row" *ngFor="let number of columns;let i = index" style="border:1px solid Red">
+        {{ item.services[i] }}
+      </div>
+    </div>
+
+    <div fxFlex="15">
+      {{ item.threshold }}
+    </div>
+  </div>
+</div>
+
+{{ maxColumn }}
+
+
+maxColumn = Math.max(...this.data.map(r => r.services.length));
+
+  columns = [...new Array(this.maxColumn)];
